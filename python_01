@@ -1,0 +1,54 @@
+#导入画图包
+from matplotlib import pyplot
+
+# 设置窗口属性
+def figure(figsize=None,  # 窗口大小，(长，宽)的元组
+           dpi=None,  # 窗口的像素分辨率
+           facecolor=None,  # 窗口的背景颜色
+           edgecolor=None,  # 窗口的边框颜色
+           frameon=True,    # 是否绘制窗口的图框，默认True
+           clear=False, #是否清除窗口现有内容
+           num=None,  #窗口的属性ID,默认为0
+           **kwargs)
+
+# 画折线图
+def plot([x],  # 横坐标，可不填,列表或数组类型
+ 		 y,    # 纵坐标，必填，列表或数组类型
+		 [fmt], # fmt = '[color][marker][line]',如'bo-':蓝色圆点实线
+   		 data=None, # data 参数接受一个对象数据类型，所有可被索引的对象都支持
+    	 **kwargs)
+
+# 显示图表
+def show()
+
+# 保存图片
+def savefig(fname, # 一个字符串，其中包含文件名的路径
+		    format=None # 图片的格式,png, pdf, ps, eps and svg
+		    **kwargs)
+
+# x/y轴刻度
+1.设置位置和标签 
+#ticks为位置, labels为标签, rotation为标签旋转角度, ticks与labels数目需保持一致, 
+def xticks(ticks, labels, rotation=0, **kwargs)
+def yticks(ticks, labels, **kwargs)
+2.获取位置和标签
+xlocs, xlabels = xticks()
+ylocs, ylabels = yticks()
+
+# x/y轴标签
+def xlabel("x轴名称")
+def ylabel("y轴名称")
+
+ # 导入字体管理器
+from matplotlib.font_manager import FontProperties
+
+# 设置汉字格式
+font = FontProperties(fname=r"c:\windows\fonts\simsun.ttc", size=12)
+# 并令需修改文字的代码行(如xlabels中)加入：
+fontproperties=font
+
+# 绘制网格
+def grid()
+
+
+
